@@ -99,7 +99,7 @@ const mensagemTexto = document.getElementById('mensagemTexto')
 
 function perdeu() {
 	mensagemTexto.classList.add('perdeu')
-	mensagemTexto.textContent = 'Você perdeu'
+	mensagemTexto.textContent = `A palavra era: ${palavraEscolhida}`
 	mensagem.classList.add('visivel')
 	setTimeout(() => mensagem.classList.remove('visivel'), 2000)
 }
