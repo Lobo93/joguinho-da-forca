@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<title>Joguinho da forca</title>
+	</head>
+	<body>
+		<div class="forca-container">
+			<div class="forca"></div>
+			<img src="images/perna2.svg" class="bonequinho perna2">
+			<img src="images/perna1.svg" class="bonequinho perna1">
+			<img src="images/braco2.svg" class="bonequinho braco2">
+			<img src="images/braco1.svg" class="bonequinho braco1">
+			<img src="images/corpo.svg" class="bonequinho corpo">
+			<img src="images/cabeca.svg" class="bonequinho cabeca">
+			<div id="elementoPalavra" class="palavra"></div>
+		</div>
+		<p id="elementoChutes" class="chutes">Chutes: </p>
+		<div id="teclado" class="teclado">
+			<button data-key="q">Q</button>
+			<button data-key="w">W</button>
+			<button data-key="e">E</button>
+			<button data-key="r">R</button>
+			<button data-key="t">T</button>
+			<button data-key="y">Y</button>
+			<button data-key="u">U</button>
+			<button data-key="i">I</button>
+			<button data-key="o">O</button>
+			<button data-key="p">P</button>
+			<button data-key="a">A</button>
+			<button data-key="s">S</button>
+			<button data-key="d">D</button>
+			<button data-key="f">F</button>
+			<button data-key="g">G</button>
+			<button data-key="h">H</button>
+			<button data-key="j">J</button>
+			<button data-key="k">K</button>
+			<button data-key="l">L</button>
+			<button data-key="z">Z</button>
+			<button data-key="x">X</button>
+			<button data-key="c">C</button>
+			<button data-key="v">V</button>
+			<button data-key="b">B</button>
+			<button data-key="n">N</button>
+			<button data-key="m">M</button>
+		</div>
+		<button id="botaoNovaPalavra" class="botao">Nova palavra</button>
+		<div id="mensagem" class="mensagem">
+			<p id="mensagemTexto" class="mensagem-texto">Mensagem</p>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>

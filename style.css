@@ -1,0 +1,165 @@
+:root {
+	--preto: #222;
+	--cinza: #ddd;
+	--cinza-claro: #eee;
+	--vermelho: #c00;
+	--verde: #1a1;
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+	background-color: var(--cinza-claro);
+}
+
+.forca-container {
+	position: relative;
+	height: 200px;
+	min-width: 100px;
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.forca {
+	position: absolute;
+	border-left: solid 2px var(--preto);
+	border-top: solid 2px var(--preto);
+	width: 100px;
+	height: 100%;
+}
+
+.palavra {
+	display: flex;
+	max-width: 100vw;
+}
+
+.letra {
+	width: 40px;
+	height: 40px;
+	font-size: 40px;
+	text-align: center;
+	border-bottom: solid 2px var(--preto);
+	margin: 0 10px;
+}
+
+.teclado {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	width: 100vw;
+	max-width: 800px;
+	margin-bottom: 4px;
+}
+
+.teclado>button {
+	width: calc(100% / 11 - 4px);
+	height: 50px;
+	border: none;
+	outline: none;
+	background: var(--cinza);
+	color: var(--preto);
+	flex-grow: 1;
+	font-size: 20px;
+	padding: 0;
+}
+
+.teclado>button:nth-child(n+10) {
+	width: calc(100% / 9 - 4px);
+}
+
+.chutes {
+	font-size: 24px;
+	margin: 0 0 40px;
+	color: var(--preto);
+}
+
+.botao {
+	height: 50px;
+	border: none;
+	outline: none;
+	background: var(--cinza);
+	color: var(--preto);
+	font-size: 20px;
+	padding: 0 20px;
+}
+
+.bonequinho {
+	position: absolute;
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.bonequinho.visivel {
+	opacity: 1;
+}
+
+.cabeca {
+	top: 5px;
+	left: 80px;
+}
+
+.corpo {
+	top: 45px;
+	left: 95px;
+}
+
+.braco1 {
+	top: 45px;
+	left: 77px;
+}
+
+.braco2 {
+	top: 45px;
+	left: 100px;
+}
+
+.perna1 {
+	top: 83px;
+	left: 77px;
+}
+
+.perna2 {
+	top: 83px;
+	left: 100px;
+}
+
+.mensagem {
+	position: absolute;
+	left: 0;
+	width: 100vw;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(0deg, transparent, #000e 40%, #000d 60%, transparent);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 1s;
+}
+
+.mensagem.visivel {
+	pointer-events: all;
+	opacity: 1;
+}
+
+.mensagem-texto {
+	font-size: 32px;
+	color: var(--verde)
+}
+
+.mensagem-texto.perdeu {
+	color: var(--vermelho)
+}
+
+@media (min-width: 640px) {
+	.mensagem-texto {
+		font-size: 60px;
+	}
+}
